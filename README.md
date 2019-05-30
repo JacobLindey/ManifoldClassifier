@@ -4,7 +4,7 @@ A 3-Manifold Classifier for use with Regina 5.1 implemented as Python package. C
 ## Contents
 - [Motivation](#Motivation)
 - [Build Status](#Build-Status)
-- [Regina 5.1](#Regina-5.1)
+- [Regina](#Regina)
 - [Code Examples](#Code-Example)
 - [Installation](#Installation)
   - [Quick Start](#Quick-Start)
@@ -34,7 +34,7 @@ Parameter | Description
 # Build Status 
 The Manifold Classifier works as intended and currently can both check individual Manifolds or search a list of Manifolds using parameter ranges. The classifier currently checks for validity, hyperbolic geometry, volume, and first homology.
 
-# Regina 5.1
+# Regina
 The project was built on top of [Regina 5.1](https://regina-normal.github.io/), a low-dimensional topology software package. Regina has an interactive user interface as well as support for lower level control using python or C++.
 
 # Code Example
