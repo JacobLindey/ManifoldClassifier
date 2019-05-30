@@ -21,20 +21,15 @@ A 3-Manifold Classifier for use with Regina 5.1 implemented as Python package. C
 This project was developed to assist in the search for a family of hyperbolic 3-Manifolds that can be described under face pairing. Construction of 3-Manifolds through face pairing requires considering a bipyramid transcribed onto the surface of a 3-Ball, in this case pairing _northern_ faces with _southern_ faces. In addition the faces of this bipyramid are subdivided a number of times to allow a twist during the pairing process.
 
 The search is based on a set of parameters described in the table below.
-<table>
-  <tr>
-    <td>Parameter</td>
-    <td>Description</td>
-  </tr>
- <\table>
 
-| --------- | ----------- |
-| n           | Number of faces in a single hemisphere |
-| p | Number of _longitudinal_ subdivisions |
-| s | Number of _latitudinal_ subdivisions |
-| r | s + p _(Utility variable)_ |
-| m | A _northern_ face is paired with the face below and _m_ faces counterclockwise |
-| t | The amount of twist that is applied during pairing |
+Parameter | Description
+--------- | -----------
+ n           | Number of faces in a single hemisphere 
+ p | Number of _longitudinal_ subdivisions 
+ s | Number of _latitudinal_ subdivisions 
+ r | s + p _(Utility variable)_ 
+ m | A _northern_ face is paired with the face below and _m_ faces counterclockwise 
+ t | The amount of twist that is applied during pairing 
 
 # Build Status {#build-status}
 The Manifold Classifier works as intended and currently can both check individual Manifolds or search a list of Manifolds using parameter ranges. The classifier currently checks for validity, hyperbolic geometry, volume, and first homology.
