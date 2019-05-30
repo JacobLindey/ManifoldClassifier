@@ -3,18 +3,18 @@ A 3-Manifold Classifier for use with Regina 5.1 implemented as Python package. C
 
 ## Contents
 - [Motivation](#Motivation)
-- [Build Status](#build-status)
-- [Regina 5.1](#regina)
-- [Code Examples](#code-example)
-- [Installation](#installation)
-  - [Quick Start](#install-quick-start)
-  - [Advanced](#install-advanced)
-- [API Reference](#reference)
-  - [Utilities](#ref-utilities)
-  - [JFace](#ref-JFace)
-  - [JTetrahedron](#ref-JTetrahedron)
-  - [JTriangulation](#ref-JTriangulation)
-  - [ManifoldEvaluator](#ref-ManifoldEvaluator)
+- [Build Status](#Build-Status)
+- [Regina 5.1](#Regina-5.1)
+- [Code Examples](#Code-Example)
+- [Installation](#Installation)
+  - [Quick Start](#Quick-Start)
+  - [Advanced](#Advanced)
+- [API Reference](#API-Reference)
+  - [Utilities](#Utilities)
+  - [JFace](#JFace)
+  - [JTetrahedron](#JTetrahedron)
+  - [JTriangulation](#JTriangulation)
+  - [ManifoldEvaluator](#ManifoldEvaluator)
 
 
 # Motivation 
@@ -31,13 +31,13 @@ Parameter | Description
  m | A _northern_ face is paired with the face below and _m_ faces counterclockwise 
  t | The amount of twist that is applied during pairing 
 
-# Build Status {#build-status}
+# Build Status 
 The Manifold Classifier works as intended and currently can both check individual Manifolds or search a list of Manifolds using parameter ranges. The classifier currently checks for validity, hyperbolic geometry, volume, and first homology.
 
-# Regina 5.1 {#regina}
+# Regina 5.1
 The project was built on top of [Regina 5.1](https://regina-normal.github.io/), a low-dimensional topology software package. Regina has an interactive user interface as well as support for lower level control using python or C++.
 
-# Code Example {#code-example}
+# Code Example
 Example 1: To test a single figure, open a new Regina project then add a new script packet containing
 ```py
 from jl_ManifoldClassifier.utilities import evaluateManifold
@@ -69,10 +69,10 @@ replacing _<file location\>_ with the location of a save location. This will sea
 
 ---
 
-# Installation {#installation}
+# Installation
 Installing external packages in Regina is not difficult but it is not straight forward either. Because of this, I've included a quick start and advanced guide for installation.
 
-## Quick Start {#install-quick-start}
+## Quick Start
 This will get you to the point where you can import the project into Regina for your own use.
 
 1. __Download__ this project.
@@ -81,7 +81,7 @@ This will get you to the point where you can import the project into Regina for 
 4. __Replace__ python27.zip with the `python27.zip` from the project you just downloaded.
 5. __Restart__ Regina if it was already running.
 
-## Advanced {#install-advanced}
+## Advanced
 Use this only if you wish to alter my code or if you are trying to incorporate your own packages into the system.
 
 Regina requires that all python files be contained in `Regina\lib\regina\python\python27.zip`. Because our files are not in that zipped folder, we'll need to remedy that.
@@ -95,9 +95,9 @@ Regina requires that all python files be contained in `Regina\lib\regina\python\
 
 ---
 
-# API Reference {#reference}
+# API Reference
 
-## Utilities {#ref-utilities}
+## Utilities
 jl_ManifoldClassifier.utilities contain the primary tools that a user is expected to interact with. It provides the core functionality promised by the project.
 
 ### Methods
@@ -116,7 +116,7 @@ searchSpace(r_range, n_range, doPrint=True, filename=None)
 
 ---
 
-## JFace {#ref-JFace}
+## JFace
 Structure for storing the pairing and permutation data of each face of the figure during triangulation.
 
 ### Properties
@@ -135,7 +135,7 @@ JFace(id)
 
 ---
 
-## JTetrahedron {#ref-JTetrahedron}
+## JTetrahedron
 This class stores the data for each tetrahedron generated during the triangulation process.
 
 ### Properties
@@ -151,7 +151,7 @@ JTetrahedron(id)
 
 ---
 
-## JTriangulation {#ref-JTriangulation}
+## JTriangulation
 A 3-Manifold triangulation generator by face pairing.
 
 ### Properties
@@ -171,7 +171,7 @@ generate()
 
 ---
 
-## ManifoldEvaluator {#ref-ManifoldEvaluator}
+## ManifoldEvaluator
 The Manifold Evaluator converts JTriangulations to Regina compatible triangulations and performs tests on those figures using the Regina interface.
 
 ### Properties
