@@ -22,8 +22,8 @@ This project was developed to assist in the search for a family of hyperbolic 3-
 
 The search is based on a set of parameters described in the table below.
 
-Parameter | Description
---------- | -----------
+Parameter   | Description
+:---------: | -----------
  n           | Number of faces in a single hemisphere 
  p | Number of _longitudinal_ subdivisions 
  s | Number of _latitudinal_ subdivisions 
