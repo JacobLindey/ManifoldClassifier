@@ -54,7 +54,7 @@ Hyperbolic? False
 Volume: 2.24412870659e-12
 HomologyH1: 2 Z
 ```
-telling us that this figure is a Manifold, does not have a hyperbolic geometry, as a volume of 0 [^volume], and first homology of `Z x Z`.
+telling us that this figure is a Manifold, does not have a hyperbolic geometry, as a volume of 0, and first homology of `Z x Z`.
 
 Example 2: To search a range of figures, use
 ```py
@@ -86,7 +86,7 @@ Use this only if you wish to alter my code or if you are trying to incorporate y
 
 Regina requires that all python files be contained in `Regina\lib\regina\python\python27.zip`. Because our files are not in that zipped folder, we'll need to remedy that.
 
-1. __Follow__ steps 1-3 from [Quick Start](#install-quick-start)
+1. __Follow__ steps 1-3 from [Quick Start](#Quick-Start)
 2. __Extract__ python27.zip
 3. __Place__ package in extracted folder. In this case take the `jl_ManifoldClassifier` folder and place it in the `python27` folder.
 4. __Zip__ the contents of python27 back to python27.zip
@@ -104,7 +104,7 @@ jl_ManifoldClassifier.utilities contain the primary tools that a user is expecte
 evaluateManifold(params)
 : Evaluates a single figure defined by a list of parameters in params  
   `params: [n, r, s, m, t]`
-  Example: See [Code Example](#code-example)
+  Example: See [Code Example](#Code-Example)
 
 searchSpace(r_range, n_range, doPrint=True, filename=None)
 : Evaluates a collection of figures definied by a range of values for `r` and `n`.
@@ -112,7 +112,7 @@ searchSpace(r_range, n_range, doPrint=True, filename=None)
   `n_range`: range of n values. Minimum n value is 1.  
   `doPrint`: determines if the results will be printed to the console. Default: True.
   `filename`: if a file name is included, the results will be saved to a CSV file at that location.
-  Example: See [Code Example](#code-example)
+  Example: See [Code Example](#Code-Example)
 
 ---
 
@@ -121,7 +121,7 @@ Structure for storing the pairing and permutation data of each face of the figur
 
 ### Properties
 id
-: an int that identifies the face locally within the tetrahedron.[^cycle-notation]
+: an int that identifies the face locally within the tetrahedron.
 
 pairing
 : a tuple describing the target tetrahedron of the pairing.
@@ -143,7 +143,7 @@ id
 : a tuple (chunk, tet) that uniquely identifies the tetrahedron inside the triangulation.
 
 faces
-: a dict containing the four Face objects that make up the tetrahedron labeled using cycle notation[^cycle-notation].
+: a dict containing the four Face objects that make up the tetrahedron labeled using cycle notation.
 
 ### Constructor
 JTetrahedron(id)
@@ -156,7 +156,7 @@ A 3-Manifold triangulation generator by face pairing.
 
 ### Properties
 n, s, p, m, t
-: see [Motivation](#motivation)
+: see [Motivation](#Motivation)
 
 tets
 : the collection of tetrahedra in the triangulation
@@ -176,7 +176,7 @@ The Manifold Evaluator converts JTriangulations to Regina compatible triangulati
 
 ### Properties
 n, r, s, p, m, t
-: see [Motivation](#motivation)
+: see [Motivation](#Motivation)
 
 jTri
 : the JTriangulation of the given figure
@@ -210,7 +210,3 @@ toCSV(file)
 : writes the paramters and results of `classify()` to the provided file.
 
 
-
-[^volume]: Note that a volume of zero is expected for Manifolds without hyperbolic geometry and the values that are produced by Regina often have rounding error. In this case, it is safe to use the volume result as if it were zero.
-
-[^cycle-notation]: Labeling the faces of tetrahedra can be done using the label of the vertex that is not included in that face. For example, the tetrahedron _ABCD_, the face _ABC_ and be uniquely identified as just _D_.
