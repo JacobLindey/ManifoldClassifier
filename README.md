@@ -2,7 +2,7 @@
 A 3-Manifold Classifier for use with Regina 5.1 implemented as Python package. Constructs triangulations of figures through face pairings and determines if they are Manifolds.
 
 ## Contents
-- [Motivation](#motivation)
+- [Motivation](#Motivation)
 - [Build Status](#build-status)
 - [Regina 5.1](#regina)
 - [Code Examples](#code-example)
@@ -17,7 +17,7 @@ A 3-Manifold Classifier for use with Regina 5.1 implemented as Python package. C
   - [ManifoldEvaluator](#ref-ManifoldEvaluator)
 
 
-# Motivation {#motivation}
+# Motivation 
 This project was developed to assist in the search for a family of hyperbolic 3-Manifolds that can be described under face pairing. Construction of 3-Manifolds through face pairing requires considering a bipyramid transcribed onto the surface of a 3-Ball, in this case pairing _northern_ faces with _southern_ faces. In addition the faces of this bipyramid are subdivided a number of times to allow a twist during the pairing process.
 
 The search is based on a set of parameters described in the table below.
